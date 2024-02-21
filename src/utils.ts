@@ -1,3 +1,4 @@
+// @ts-ignore
 export const getTopKClasses = async (logits, classes) => {
     const values = await logits.data();
     const topK = Math.min(classes.length, values.length);

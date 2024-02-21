@@ -69,7 +69,7 @@ function App() {
                         time: new Date().toTimeString()
                     }]);
 
-                    const student = await fetch('http://localhost:4000/present/' + predictions[0].class, {
+                    await fetch('http://localhost:4000/present/' + predictions[0].class, {
                         method: 'POST',
                         body: JSON.stringify({
                             latitude: locationRef.current?.coords.latitude,
